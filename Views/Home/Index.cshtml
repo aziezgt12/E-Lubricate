@@ -1,0 +1,362 @@
+﻿@model IEnumerable<ELubricate.Models.Category.Category>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<!-- Page Content -->
+<section class="hero-banner page-content">
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="/assets/img/Banner_06.jpg" class="d-none d-md-block" alt="">
+                <img src="/assets/img/Banner_06_mobile.jpg" class="d-md-none" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="/assets/img/Banner_07.jpg" class="d-none d-md-block" alt="">
+                <img src="/assets/img/Banner_07_mobile.jpg" class="d-md-none" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="/assets/img/Banner_08.jpg" class="d-none d-md-block" alt="">
+                <img src="/assets/img/Banner_08_mobile.jpg" class="d-md-none" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="/assets/img/Banner_09.jpg" class="d-none d-md-block" alt="">
+                <img src="/assets/img/Banner_09_mobile.jpg" class="d-md-none" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="/assets/img/Banner_10.jpg" class="d-none d-md-block" alt="">
+                <img src="/assets/img/Banner_10_mobile.jpg" class="d-md-none" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="/assets/img/Banner_11.jpg" class="d-none d-md-block" alt="">
+                <img src="/assets/img/Banner_11_mobile.jpg" class="d-md-none" alt="">
+            </div>
+        </div>
+
+        <div class="swiper-pagination"></div>
+        <div class="autoplay-progress d-none">
+            <svg viewBox="0 0 48 48">
+                <circle cx="24" cy="24" r="20"></circle>
+            </svg>
+            <span></span>
+        </div>
+    </div>
+</section>
+
+<!-- Overview -->
+<div class="container overview">
+    <div class="row">
+        <div class="col-md-6 overview-img text-center" data-aos="fade-right">
+            <img class="img-overview" src="/assets/img/library-vector.png" alt="">
+        </div>
+        <div class="col-md-6 overview-text align-self-center" data-aos="fade-left">
+            <h2>Lubricants E-Library</h2>
+            <div class="divider">
+            </div>
+            <p>
+                Kami memiliki banyak informasi yang terkait dengan pelumas dan pelumasan yang dapat anda lihat
+                atau
+                di download. Tolong diperhatikan bahwa informasi yang anda lihat dapat terhubung ke
+                bagian-bagian
+                lainnya.
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- Category -->
+<div class="container category-section">
+    <div class="row title justify-content-center text-center" data-aos="fade-up">
+        <h3>Category</h3>
+        <div class="divider">
+        </div>
+    </div>
+    <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 g-3 g-md-4 justify-content-center">
+        @foreach (var category in Model)
+        {
+            <div class="col" data-aos="fade-up">
+                <div class="card-wrapper">
+                    <a href="/categories.html">
+                        <div class="card-thumbnail" style="background-image: url('/assets/img/category_@(category.ID).jpg');">
+                        </div>
+                    </a>
+                    <div class="card-title">
+                        @category.Name
+                    </div>
+                </div>
+            </div>
+        }
+
+    @*    <div class="col" data-aos="fade-up" data-aos-delay="100">
+            <div class="card-wrapper">
+                <a href="/categories.html">
+                    <div class="card-thumbnail" style="background-image: url('/assets/img/category_\(1\).jpg');">
+                    </div>
+                </a>
+                <div class="card-title">
+                    CONDEMNING LIMIT
+                </div>
+            </div>
+        </div>
+        <div class="col" data-aos="fade-up" data-aos-delay="200">
+            <div class="card-wrapper">
+                <a href="/categories.html">
+                    <div class="card-thumbnail" style="background-image: url('/assets/img/category_\(3\).jpg');">
+                    </div>
+                </a>
+                <div class="card-title">
+                    ORGANIZATION RULES
+                </div>
+            </div>
+        </div>
+        <div class="col" data-aos="fade-up" data-aos-delay="300">
+            <div class="card-wrapper">
+                <a href="/categories.html">
+                    <div class="card-thumbnail" style="background-image: url('/assets/img/category_\(4\).jpg');">
+                    </div>
+                </a>
+                <div class="card-title">
+                    OEM Manual Book
+                </div>
+            </div>
+        </div>
+        <div class="col" data-aos="fade-up" data-aos-delay="400">
+            <div class="card-wrapper">
+                <a href="/categories.html">
+                    <div class="card-thumbnail" style="background-image: url('/assets/img/category_\(5\).jpg');">
+                    </div>
+                </a>
+                <div class="card-title">
+                    STANDARD
+                </div>
+            </div>
+        </div>
+        <div class="col" data-aos="fade-up" data-aos-delay="500">
+            <div class="card-wrapper">
+                <a href="/categories.html">
+                    <div class="card-thumbnail" style="background-image: url('/assets/img/category_\(6\).jpg');">
+                    </div>
+                </a>
+                <div class="card-title">
+                    HANDBOOK & REFERENCES
+                </div>
+            </div>
+        </div>*@
+    </div>
+    <div class="row mt-5">
+        <div class="col text-center" data-aos="fade-up">
+            <a href="/categories.html" type="button" class="btn btn-info btn-load-more text-white">Lihat
+                semua</a>
+        </div>
+    </div>
+</div>
+
+<!-- Explore -->
+<div class="container category-section">
+    <div class="row title justify-content-center text-center" data-aos="fade-up">
+        <h3>Explore Latest Post</h3>
+        <div class="divider">
+        </div>
+    </div>
+    <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 g-3 g-md-4">
+        <div class="col" data-aos="fade-up">
+            <div class="card-wrapper">
+                <div class="card-thumbnail" style="background-image: url('/assets/img/cover_1.jpg');">
+                    <span class="badge text-bg-primary">Category Name</span>
+                </div>
+                <div class="card-date">28 Januari 2023</div>
+                <div class="card-title">
+                    LUBE EQUIVALENT
+                </div>
+                <div class="card-text">
+                    Some quick example text to build on the card title and make up the bulk of the card's
+                    content.
+                </div>
+                <a href="category-details.html" class="btn btn-danger">Read more</a>
+            </div>
+        </div>
+        <div class="col" data-aos="fade-up" data-aos-delay="100">
+            <div class="card-wrapper">
+                <div class="card-thumbnail" style="background-image: url('/assets/img/cover_2.jpg');">
+                    <span class="badge text-bg-primary">Category Name</span>
+                </div>
+                <div class="card-date">28 Januari 2023</div>
+                <div class="card-title">
+                    TROUBLESHOOTING
+                </div>
+                <div class="card-text">
+                    Some quick example text to build on the card title and make up the bulk of the card's
+                    content.
+                </div>
+                <a href="category-details.html" class="btn btn-danger">Read more</a>
+            </div>
+        </div>
+        <div class="col" data-aos="fade-up" data-aos-delay="200">
+            <div class="card-wrapper">
+                <div class="card-thumbnail" style="background-image: url('/assets/img/cover_3.jpg');">
+                    <span class="badge text-bg-primary">Category Name</span>
+                </div>
+                <div class="card-date">28 Januari 2023</div>
+                <div class="card-title">
+                    OEM MANUAL BOOK
+                </div>
+                <div class="card-text">
+                    Some quick example text to build on the card title and make up the bulk of the card's
+                    content.
+                </div>
+                <a href="category-details.html" class="btn btn-danger">Read more</a>
+            </div>
+        </div>
+        <div class="col" data-aos="fade-up" data-aos-delay="300">
+            <div class="card-wrapper">
+                <div class="card-thumbnail" style="background-image: url('/assets/img/cover_4.jpg');">
+                    <span class="badge text-bg-primary">Category Name</span>
+                </div>
+                <div class="card-date">28 Januari 2023</div>
+                <div class="card-title">
+                    AUTOMOTIVE CHART
+                </div>
+                <div class="card-text">
+                    Some quick example text to build on the card title and make up the bulk of the card's
+                    content.
+                </div>
+                <a href="category-details.html" class="btn btn-danger">Read more</a>
+            </div>
+        </div>
+        <div class="col" data-aos="fade-up">
+            <div class="card-wrapper">
+                <div class="card-thumbnail" style="background-image: url('/assets/img/cover_5.jpg');">
+                    <span class="badge text-bg-primary">Category Name</span>
+                </div>
+                <div class="card-date">28 Januari 2023</div>
+                <div class="card-title">
+                    INDUSTRIAL CHART
+                </div>
+                <div class="card-text">
+                    Some quick example text to build on the card title and make up the bulk of the card's
+                    content.
+                </div>
+                <a href="category-details.html" class="btn btn-danger">Read more</a>
+            </div>
+        </div>
+        <div class="col" data-aos="fade-up" data-aos-delay="100">
+            <div class="card-wrapper">
+                <div class="card-thumbnail" style="background-image: url('/assets/img/cover_6.jpg');">
+                    <span class="badge text-bg-primary">Category Name</span>
+                </div>
+                <div class="card-date">28 Januari 2023</div>
+                <div class="card-title">
+                    COMPRESSOR
+                </div>
+                <div class="card-text">
+                    Some quick example text to build on the card title and make up the bulk of the card's
+                    content.
+                </div>
+                <a href="category-details.html" class="btn btn-danger">Read more</a>
+            </div>
+        </div>
+        <div class="col" data-aos="fade-up" data-aos-delay="200">
+            <div class="card-wrapper">
+                <div class="card-thumbnail" style="background-image: url('/assets/img/cover_7.jpg');">
+                    <span class="badge text-bg-primary">Category Name</span>
+                </div>
+                <div class="card-date">28 Januari 2023</div>
+                <div class="card-title">
+                    SHARING KNOWLEDGE
+                </div>
+                <div class="card-text">
+                    Some quick example text to build on the card title and make up the bulk of the card's
+                    content.
+                </div>
+                <a href="category-details.html" class="btn btn-danger">Read more</a>
+            </div>
+        </div>
+        <div class="col" data-aos="fade-up" data-aos-delay="300">
+            <div class="card-wrapper">
+                <div class="card-thumbnail" style="background-image: url('/assets/img/cover_8.jpg');">
+                    <span class="badge text-bg-primary">Category Name</span>
+                </div>
+                <div class="card-date">28 Januari 2023</div>
+                <div class="card-title">
+                    CONDEMNING LIMIT
+                </div>
+                <div class="card-text">
+                    Some quick example text to build on the card title and make up the bulk of the card's
+                    content.
+                </div>
+                <a href="category-details.html" class="btn btn-danger">Read more</a>
+            </div>
+        </div>
+        <div class="col" data-aos="fade-up">
+            <div class="card-wrapper">
+                <div class="card-thumbnail" style="background-image: url('/assets/img/cover_9.jpg');">
+                    <span class="badge text-bg-primary">Category Name</span>
+                </div>
+                <div class="card-date">28 Januari 2023</div>
+                <div class="card-title">
+                    BAHAN PRESENTASI
+                </div>
+                <div class="card-text">
+                    Some quick example text to build on the card title and make up the bulk of the card's
+                    content.
+                </div>
+                <a href="category-details.html" class="btn btn-danger">Read more</a>
+            </div>
+        </div>
+    </div>
+    <div class="row mt-5">
+        <div class="col text-center" data-aos="fade-up">
+            <a href="#" type="button" class="btn btn-light btn-load-more">Load more</a>
+        </div>
+    </div>
+</div>
+
+@*ini untuk load more *@
+
+@*<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>*@
+
+@*<a href="#" id="load-more-button" class="btn btn-info btn-load-more text-white">Load More</a>*@
+
+@*<script>
+    var currentPage = 1; // Menyimpan halaman saat ini
+    var pageSize = 8;   // Jumlah data yang akan dimuat setiap kali "Load More" diklik
+
+    // Fungsi untuk memuat data kategori
+    function loadCategories(page) {
+        // Simulasikan pengambilan data dari server
+        // Gantilah dengan kode yang sesuai untuk mengambil data dari server Anda.
+        var data = @JsonConvert.SerializeObject(Model.Skip((page - 1) * pageSize).Take(pageSize));
+
+        // Iterasi melalui data dan tambahkan ke tampilan
+        $.each(data, function (index, category) {
+            var categoryHtml = `
+                <div class="col" data-aos="fade-up">
+                    <div class="card-wrapper">
+                        <a href="/categories.html">
+                            <div class="card-thumbnail" style="background-image: url('/assets/img/category_${category.ID}.jpg');">
+                            </div>
+                        </a>
+                        <div class="card-title">
+                            ${category.Name}
+                        </div>
+                    </div>
+                </div>`;
+            $(".row-cols-2.row-cols-sm-3.row-cols-md-4.g-3.g-md-4.justify-content-center").append(categoryHtml);
+        });
+
+        // Tingkatkan halaman saat ini
+        currentPage++;
+    }
+
+    // Memanggil fungsi pertama kali
+    loadCategories(currentPage);
+
+    // Menambahkan event listener pada tombol "Load More" dengan jQuery
+    $("#load-more-button").on("click", function(e) {
+        e.preventDefault(); // Mencegah tindakan standar klik anchor
+        loadCategories(currentPage);
+    });
+</script>
+*@
